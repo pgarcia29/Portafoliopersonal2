@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portafolio Personal</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 15px;
+            padding: 5px;
+            background-color: black;
+        }
+        .menu1{
+            width: 100%;
+            padding: 5px;
+            background-color: #fde4e8;
+            color:#222;
+            display: flex;
+            flex-flow:row wrap;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: absolute;
+            top: 59px;
+            z-index: 20;
+        }
+        
+        .menu1 div{
+            padding: 10px;
+        }
+        img{
+            width: 20px;
+        }
+        
+        .img1{
+            width:40px;
+            margin-left: 30px;
+        }
+        
+        .menu2{
+            width: 100%;
+            padding: 5px;
+            color:#222;
+            display: flex;
+            flex-flow:row wrap;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgba(255, 244, 244, 0.9);
+            position: fixed;
+            top: 0px;
+            left:0px;
+            width: 100%;
+            z-index: 100;
+            
+        }
+        
+        a{
+            margin-right:20px ;
+            text-decoration: none;
+            padding: 15px;
+        }
+        
+        a:hover{
+            background-color: #fde4e8;
+        }
+        
+        
+        .paisaje{
+            width: 100%;
+        }
+        
+        .img{
+            position: relative;
+        }
+        
+        .personal{
+            width: 450px;
+            position:absolute;
+            top:200px;
+            left: 300px;
+        
+        }
+        
+        .text, .parr{
+            position: relative;
+        }
+        
+        .text{
+            position: absolute;
+            top: 460px;
+            left: 800px;
+            font-size: 20px;
+        }
+        
+        .porta{
+            background-color: whitesmoke;
+            padding: 10px;
+        }
+        
+        .cont2{
+            background-color: #F3E2D9;
+            width: 100%;  
+            display: flex;
+            padding: 200px;
+            flex-direction: row;
+            gap: 200px;
+            justify-content: center;
+        
+        }
+        
+        .imgper{
+            width: 250px;
+        }
+        
+        .sobre{
+            position: relative;
+        }
+        
+        .sobre{
+            position: absolute;
+            top: 1200px;
+            left: 700px;
+        }
+        
+        
+        .rowsob{
+            padding: 20px;
+        }
+        
+        .cont3{
+            width: 100%;
+            background-color: whitesmoke;
+            padding: 270px;
+        }
+        
+        ul li{
+            padding: 10px;
+        }
+        
+        ul{
+            background-color: #EDCCB8
+        }
+        
+        .habi{
+            text-align: center;
+        }
+        
+        .cont4{
+            width: 100%;
+            background-color:#F3E2D9;
+            padding: 200px;
+        }
+        
+        .contenedor{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        
+        .p{
+            background-color: #F3E2D9;
+        }
+        
+        .row{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        
+        .titu{
+            font-weight: bold;
+            margin-bottom: 10px;
+        
+        }
+        
+        .subti{
+            padding:15px ;
+        }
+        
+        .titulo{
+            text-align: center;
+        }
+        
+        
+        
+        .formu{
+            display: flex;
+        }
+        .formup2,
+        .formu .formup2{
+            height: 45px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .textarea{
+            height: 80px;
+            width: 100%;
+        }
+        .name{
+            margin-right: 10px;
+        }
+        .formup2 input, .formu input,
+        .textarea textarea{
+            height: 100%;
+            width: 100%;
+            border: 1px solid lightgrey;
+            border-radius: 6px;
+            outline: none;
+            padding: 0 15px;
+            font-size: 17px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .formup2 input:focus, .formu input:focus,
+        .textarea textarea:focus{
+            border-color: #b3b3b3;
+        }
+        .textarea textarea{
+          padding-top: 10px;
+          resize: none;
+        }
+        .button{
+          display: flex;
+          align-items: center;
+        }
+        form .button button{
+          color: #fff;
+          display: block;
+          width: 160px;
+          height: 45px;
+          outline: none;
+          font-size: 18px;
+          font-weight: 500;
+          border-radius: 6px;
+          cursor: pointer;
+          flex-wrap: nowrap;
+          background:#cf99a2;
+          border: 2px solid #cf99a2;
+          margin-top: 20px;
+        }
+        form .button button:hover{
+          color: #cf99a2;
+          background: none;
+        }
+        
+        .name, .email{
+            margin-bottom:10px;
+            height: 30px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="Contenedor1">
+        <nav class="menu1">
+            <div>Compañía A & K</div>
+            <div>
+                <a href="https://www.facebook.com/pao.torres.986/" target="_blank"><img src="Imagenes/ig.jpeg"></a>
+                <a href="https://www.instagram.com/p_garcia29/" target="_blank"><img src="Imagenes/fb.jpeg"></a>
+            </div>
+        </nav>
+        <nav class="menu2">
+            <div>
+            <img src="Imagenes/logo.png" class="img1"> 
+            </div>
+            <div class="row">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+        <div class="img" id="home">
+            <img src="Imagenes/pais.jpg" class="paisaje">
+            <img src="Imagenes/pers.jpg" class="personal">
+        </div>
+        <div class="text">
+            <h2>Hola! Mi Nombre es</h2>
+            <h1>Alejandra Torres</h1>
+            <h3 class="porta">Este es mi Portafolio Personal.</h3>
+        </div>
+    </div>
+    <h1 class="sobre">Sobre mí</h1>
+    <div class="cont2" id="about">
+        <div class="rowsob">
+            <img src="Imagenes/azul1.jpeg" class="imgper"><br>
+            <p class="parr">Soy una persona alegre, me gusta divertirme y hacer sentir bien a las personas que me rodean, soy extrovertida y me gusta experimentar nuevas cosas</p>
+        </div>
+        <div class="rowsob">
+            <img src="Imagenes/azul2.jpeg" class="imgper"><br>
+            <p class="parr">Me gusta leer de géneros variados, no tengo un género favorito establecido pero los generos que más me llaman la atención seria el misterio y las comedias romanticas</p>
+        </div>
+        <div class="rowsob">
+            <img src="Imagenes/azul3.jpeg" class="imgper"><br>
+            <p class="parr">Me gusta mucho ver series asiaticas o cualquier otro tipo de series o peliculas, me gustan el genero de misterio y comedia romanticas</p>
+        </div>
+    </div>
+    <div class="cont3" id="habilidades">
+       <h1 class="habi">Habilidades adquiridas</h1>
+       <p>En mis últimos años de la carrera de Informática he adquirido varias habilidades como ser:
+        <ul>
+            <li>Aprendí el idioma de programación Pseint, este idioma es bastante fácil de aprender y manejar</li>
+            <li>Aprendí también el idioma de HTML en la clase de Dieseño Web</li>
+            <li>Ahora estoy aprendiendo a manejar el idioma Css también en la clase de Diseño Web</li>
+            <li>Aprendí a codificar Macros en la clase de laboratorio y a hacer varias funcionalidades importantes ahí</li>
+        </ul>
+       </p> 
+    </div>
+
+    <div class="cont4" id="contacto">
+        <section class="contact">
+                <h2 class="titulo">Contacto</h2>
+                <div class="contenedor">
+                    <div class="izquierda">
+                        <div class="titu">Información</div>
+                        <p class="p">Para más información sobre mí o cualquier ayuda sobre mis habilidades adquiridas a desarrollar puedes escribirme.</p>
+                        <div class="icons">
+                            <div class="row">
+                                <i class="fas fa-user"></i>
+                                <div class="info">
+                                    <div class="titu">Nombre</div>
+                                    <div class="subti">Alejandra Torres</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info">
+                                    <div class="titu">Dirección</div>
+                                    <div class="subti">Comayagua, Honduras</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info">
+                                    <div class="titu">Email</div>
+                                    <div class="subti">pt567461@gmail.com</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fab fa-whatsapp"></i>
+                                <div class="info">
+                                    <div class="titu">Teléfono</div>
+                                    <div class="subti"><a href="https://api.whatsapp.com/send?phone=50493414556&text=Hola Quiero saber mas sobre los productos." target="_blank">(+504) 9341-4556</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="derecha">
+                        <div class="titu">Mensaje</div>
+                            <form>
+                                <div class="formu">
+                                    <div class="name">
+                                        <input type="text" placeholder="Nombre" id="nombre" >
+                                    </div>
+                                    <div class="email">
+                                        <input type="email" id="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="formup2">
+                                    <input type="text" id="asunto" placeholder="Asunto">
+                                </div>
+                                <div class="textarea">
+                                    <textarea cols="30" rows="10" id="mensaje" placeholder="Mensaje.."></textarea>
+                                </div>
+                                <div class="button">
+                                    <button type="submit">Enviar Mensaje</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+</body>
+</html>
